@@ -28,7 +28,7 @@ ul {
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: var(--head-color);
 }
 
@@ -74,7 +74,7 @@ body {
   display: flex;
   margin-left: auto;
   column-gap: 50px;
-}
+  }
 
 /*.heder-item:not(:last-child) {
 margin-right: 50px;
@@ -86,7 +86,7 @@ margin-right: 50px;
 }
 
 .logo {
-  font-family: 'Raleway';
+  font-family: "Raleway";
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19; /* identical to box height */
@@ -140,7 +140,28 @@ a.heder-portfolio {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--text-color);
+  display: flex;
+  align-items: center;
+  }
+
+.heder-email::before {
+    content: "";
 }
+
+.heder-tel::before {
+    content: "";
+}
+
+.email-icon,
+.tel-icon {
+  fill: currentColor;
+  align-items: center;
+  margin-right: 10px;
+}
+
+/* align-items: center;
+  justify-content: center;
+  align-content: center; */
 
 .nav {
   align-items: center;
@@ -149,9 +170,21 @@ a.heder-portfolio {
 /*----- Унікальний контент сторінки -----*/
 /*----------------------------------------------- hero -----*/
 .section-hero {
-  background-color: var(--background-color);
+  background-color: #2f303a;
   padding: 200px 0;
   text-align: center;
+  min-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/Img-hero.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .hero-title {
@@ -252,7 +285,7 @@ a.heder-portfolio {
 }
 
 .aktiviti-item {
-  width: calc((100% - 90px) / 4 );
+  width: calc((100% - 90px) / 4);
 }
 
 .aktiviti-title {
@@ -306,11 +339,52 @@ a.heder-portfolio {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--text-color);
+  margin-bottom: 16px;
 }
 
 .team-item {
   background-color: var(--main-light-color);
 }
+
+.team-soc {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.team-soc-link {
+  width: 44px; height: 44px; border-radius: 50%;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #AFB1B8;
+  }
+
+.team-soc-icon {
+    fill: currentColor
+  } 
+
+.team-soc-link:hover,
+.team-soc-link:focus {
+  background-color: #2196F3;
+  color: #ffffff;
+}
+
+/* інший спосіб подвійного hover/focus */
+/* .team-soc-link:hover,
+.team-soc-link:focus {
+  background-color: #2196F3;
+}
+.team-soc-link:hover .team-soc-icon,
+.team-soc-link:focus .team-soc-icon {
+  fill: #FFFFFF;
+}
+.team-soc-icon {
+  fill: #AFB1B8;
+} */
+
 
 /*------------------------------------------------footer--------------------*/
 
@@ -418,7 +492,7 @@ a.heder-portfolio {
 }
 
 .portfolio-item {
-  width: calc((100% - 60px) / 3 );
+  width: calc((100% - 60px) / 3);
 }
 
 .portfolio-text {
