@@ -10,6 +10,7 @@
   --secondary-border-color: #ececec; /*другорядний колір рамки*/
   --block-margin: 30px; /*стандартні відступи між блоками*/
   --section-margin: 94px; /*стандартні відступи між секціями*/
+  --svg-baza-color: #afb1b8  /* базовий колір svg елементів */
 }
 
 p,
@@ -74,7 +75,7 @@ body {
   display: flex;
   margin-left: auto;
   column-gap: 50px;
-  }
+}
 
 /*.heder-item:not(:last-child) {
 margin-right: 50px;
@@ -142,14 +143,14 @@ a.heder-portfolio {
   color: var(--text-color);
   display: flex;
   align-items: center;
-  }
+}
 
 .heder-email::before {
-    content: "";
+  content: "";
 }
 
 .heder-tel::before {
-    content: "";
+  content: "";
 }
 
 .email-icon,
@@ -215,7 +216,7 @@ a.heder-portfolio {
   text-align: center;
   letter-spacing: 0.06em;
   color: var(--main-light-color);
-  background-color: #2196f3;
+  background-color: var(--accent-color);
   min-width: 216px;
 
   border: transparent;
@@ -238,6 +239,17 @@ a.heder-portfolio {
 
 .benefits-item {
   width: 270px;
+}
+
+.benefits-icons {
+  width: 270px;
+  height: 120px;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .img {
@@ -354,22 +366,24 @@ a.heder-portfolio {
 }
 
 .team-soc-link {
-  width: 44px; height: 44px; border-radius: 50%;
-  background-color: #ffffff;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--main-light-color);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #AFB1B8;
-  }
+  color: var(--svg-baza-color);
+}
 
 .team-soc-icon {
-    fill: currentColor
-  } 
+  fill: currentColor;
+}
 
 .team-soc-link:hover,
 .team-soc-link:focus {
-  background-color: #2196F3;
-  color: #ffffff;
+  background-color: var(--accent-color);
+  color: var(--main-light-color);
 }
 
 /* інший спосіб подвійного hover/focus */
@@ -385,6 +399,47 @@ a.heder-portfolio {
   fill: #AFB1B8;
 } */
 
+/* -----------------------------------customers-------------- */
+
+.customers-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 50px;
+}
+
+.customers-link {
+  width: 170px;
+  height: 92px;
+  background-color: transparent;
+  border: 1px solid var(--svg-baza-color);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--svg-baza-color);
+}
+
+.icon-customers-logo {
+  fill: currentColor;
+}
+
+.customers-link:hover,
+.customers-link:focus {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+.customers-list {
+  display: flex;
+  column-gap: 30px;
+}
+
+.customers-item {
+  width: calc((100% - 150px) / 6);
+}
 
 /*------------------------------------------------footer--------------------*/
 
@@ -399,7 +454,7 @@ a.heder-portfolio {
 }
 
 .footer-logo {
-  color: #ffffff;
+  color: var(--main-light-color);
 }
 
 .footer-address:hover,
@@ -420,6 +475,11 @@ a.heder-portfolio {
 .footer-item {
   margin-bottom: 9px;
 }
+
+.footer-list {
+  margin-right: 70px;
+}
+
 
 .footer-item:last-child {
   margin-bottom: 0px;
@@ -446,6 +506,52 @@ a.heder-portfolio {
   line-height: 1.71; /* or 171% */
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-call {
+  font-weight: 700;
+font-size: 14px;
+line-height: 1.14;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+color: #FFFFFF;
+}
+
+.footer-soc-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+  
+}
+
+.footer-soc-link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--main-light-color);
+}
+
+.footer-soc-icon {
+  fill: currentColor;
+}
+
+.footer-soc-link:hover,
+.footer-soc-link:focus {
+  background-color: var(--accent-color);
+  color: var(--main-light-color);
+}
+
+.address {
+  display: flex;
+}
+
+.footer-soc-div {
+  
 }
 
 /*-------------------portfolio--------------------*/
@@ -498,7 +604,7 @@ a.heder-portfolio {
 .portfolio-text {
   padding: 20px 24px;
   border-top: transparent;
-  border: 1px solid #eeeeee;
+  border: 1px solid var(--border-color);
 }
 
 .portfolio-title {
