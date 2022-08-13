@@ -388,8 +388,6 @@ a.heder-portfolio {
   color: var(--main-light-color);
 }
 
-
-
 /* інший спосіб подвійного hover/focus */
 /* .team-soc-link:hover,
 .team-soc-link:focus {
@@ -550,7 +548,6 @@ a.heder-portfolio {
   color: var(--main-light-color);
 }
 
-
 .conteiner-soc {
   display: flex;
   align-items: center;
@@ -560,7 +557,6 @@ a.heder-portfolio {
   display: block;
   height: 80px;
   justify-content: center;
-  
 }
 
 /*-------------------portfolio--------------------*/
