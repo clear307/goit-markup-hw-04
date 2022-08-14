@@ -550,7 +550,7 @@ a.heder-portfolio {
 
 .conteiner-soc {
   display: flex;
-  align-items: center;
+  align-items: baseline;
 }
 
 .footer-soc-div {
